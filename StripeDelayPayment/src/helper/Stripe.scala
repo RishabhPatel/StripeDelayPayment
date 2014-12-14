@@ -86,7 +86,7 @@ object Stripe {
         try {          
            val  customer = Customer.create(customerParams)           
                      
-           striperesponse put("transcationId",customer.getId)
+           striperesponse put("customerId",customer.getId)
            striperesponse put("Error","0")
            striperesponse put("Message","Transcation Successfully.")
            
