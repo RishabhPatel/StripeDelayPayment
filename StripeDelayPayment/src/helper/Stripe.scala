@@ -37,19 +37,10 @@ object Stripe {
         	//Logger.info("exception = %s" format ex)
         		
         	striperesponse put("Error","1")
-        	striperesponse put("Message","Your card number is incorrect.")
+        	striperesponse put("Message","Customer Card Date Invalid.")
         		
          }
-         case ex: com.stripe.exception.APIConnectionException =>{
-           
-            //Logger.info("exception = %s" format ex)
-        		
-        	striperesponse put("Error","2") 
-            striperesponse put("Message","API connection Error.")
-        	 	 
-         }
-         
-         
+                  
       }  
     
     return striperesponse
